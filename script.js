@@ -21,9 +21,20 @@ function prova(bot){
     let tutto = document.querySelectorAll("input")
     let tentativo = [];
     for(let i = 0; i < 4; i++){
+        if(parseInt(tutto[i+5*turno].name)==0){
+            alert("Inserire un tentativo completo.");
+            return;
+        }
         tentativo[i] = parseInt(tutto[i+5*turno].name);
     }
     bot.value = conta_giusti(codice,tentativo);
+    if(bot.value == 4){
+        alert("Hai indovinato il codice in " + (parseInt(turno) + 1) + " tentativi");
+        for(let i = 0;i<tutto.length;i++){
+            tutto[i].disabled = true;
+        }
+        return;
+    }
     turno++;
     attiva(tutto,5*turno,5*turno+5);
     

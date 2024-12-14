@@ -1,11 +1,20 @@
 table{
     margin: 0 auto;
 }
+body{
+    text-align: center;
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 1cm;
+}
 
 input{
     width: 2cm;
     height: 2cm;
     font-size: 0.75cm;
+}
+
+.rot{
+    border-radius: 50%;
 }
 
 #invia{
