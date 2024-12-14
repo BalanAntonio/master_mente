@@ -5,6 +5,7 @@ table{
 input{
     width: 2cm;
     height: 2cm;
+    font-size: 0.75cm;
 }
 
 #invia{
